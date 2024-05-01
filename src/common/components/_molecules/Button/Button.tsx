@@ -1,7 +1,8 @@
+import { ButtonType } from "../../../types"
 
-const Button = () => {
+const Button = ({className,children}:ButtonType) => {
   return (
-    <button>Button</button>
+    <button className={className}>{children}</button>
   )
 }
 
