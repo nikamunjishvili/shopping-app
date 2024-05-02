@@ -1,8 +1,14 @@
 
-const Input = () => {
+
+const Input = ({className, placeholder, type, name}) => {
   return (
-    <div>Input</div>
-  )
+    <Input
+      className={className}
+      placeholder={placeholder}
+      type={type}
+      name={name}
+    />
+  );
 }
 
 export default Input
