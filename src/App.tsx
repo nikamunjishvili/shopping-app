@@ -1,11 +1,10 @@
-import { HomeIcon } from "./common/components/_atoms";
 import { MainLayout } from "./common/components/_organisms";
+import Breadcrumbs from "./common/components/_organisms/Breadcrumbs/Breadcrumbs";
 
 const App = () => {
   return (
     <MainLayout>
-      <h1>App</h1>
-      <HomeIcon width={100} height={100} />
+      <Breadcrumbs />
     </MainLayout>
   );
 };

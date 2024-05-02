@@ -1,8 +1,12 @@
+import { ButtonType } from "../../../types";
 
-const Button = () => {
+const Button = ({ className, children, onClick, src}: ButtonType) => {
   return (
-    <button>Button</button>
-  )
-}
+    <button className={className} onClick={onClick}>
+      {children}
+      <img src={src} alt="" />
+    </button>
+  );
+};
 
-export default Button
+export default Button;
