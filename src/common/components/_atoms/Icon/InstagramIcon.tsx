@@ -1,6 +1,6 @@
 import { IconProps } from "../../../types";
 
-const Instagtam = ({ width, height }: IconProps) => {
+const InstagramIcon = ({ width, height }: IconProps) => {
   return (
     <svg
       width={width}
@@ -37,4 +37,4 @@ const Instagtam = ({ width, height }: IconProps) => {
   );
 };
 
-export default Instagtam;
+export default InstagramIcon;

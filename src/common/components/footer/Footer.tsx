@@ -1,6 +1,12 @@
-import { ApplePay, DiscoverPay, MastercardPay, SecurePay, VisaPay } from "../_atoms";
-import FacebookIcon from "../_atoms/Icon/Facebook";
-import Instagtam from "../_atoms/Icon/Instagtam";
+import {
+  ApplePay,
+  DiscoverPay,
+  FacebookIcon,
+  InstagramIcon,
+  MastercardPay,
+  SecurePay,
+  VisaPay,
+} from "../_atoms";
 import Plant from "../_atoms/Icon/Plant";
 import Social from "../_atoms/Icon/Social";
 import Twitter from "../_atoms/Icon/Twitter";
@@ -36,7 +42,7 @@ const Footer = () => {
             <FacebookIcon width={40} height={40} />
             <Twitter width={40} height={40} />
             <Social width={40} height={40} />
-            <Instagtam width={40} height={40} />
+            <InstagramIcon width={40} height={40} />
           </div>
         </div>
       </div>
@@ -102,14 +108,36 @@ const Footer = () => {
         </div>
         <div className="flex py-5 items-center justify-between w-full md:max-w-[1250px] mx-auto mt-4 md:mt-0">
           <div>
-            <p className="text-sm text-[#808080]">Ecobazar eCommerce © 2021. All Rights Reserved</p>
+            <p className="text-sm text-[#808080]">
+              Ecobazar eCommerce © 2021. All Rights Reserved
+            </p>
           </div>
           <div className="flex gap-2">
-            <ApplePay className="cursor-pointer rounded-md" width={45} height={31.76}/>
-            <VisaPay className="cursor-pointer rounded-md" width={45} height={31.76}/>
-            <DiscoverPay className="cursor-pointer rounded-md" width={45} height={31.76}/>
-            <MastercardPay className="cursor-pointer rounded-md" width={45} height={31.76}/>
-            <SecurePay className="cursor-pointer rounded-md" width={45} height={31.76}/>
+            <ApplePay
+              className="cursor-pointer rounded-md"
+              width={45}
+              height={31.76}
+            />
+            <VisaPay
+              className="cursor-pointer rounded-md"
+              width={45}
+              height={31.76}
+            />
+            <DiscoverPay
+              className="cursor-pointer rounded-md"
+              width={45}
+              height={31.76}
+            />
+            <MastercardPay
+              className="cursor-pointer rounded-md"
+              width={45}
+              height={31.76}
+            />
+            <SecurePay
+              className="cursor-pointer rounded-md"
+              width={45}
+              height={31.76}
+            />
           </div>
         </div>
       </div>

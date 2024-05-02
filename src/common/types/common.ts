@@ -11,5 +11,5 @@ export interface InputTypes {
 }
 export interface ButtonType {
   className: string;
-  children: any;
+  children: React.ReactNode;
 }

@@ -3,12 +3,10 @@ import Footer from "./common/components/footer/Footer";
 
 const App = () => {
   return (
-    <div>
       <MainLayout>
         <h1>App</h1>
         <Footer />
       </MainLayout>
-    </div>
   );
 };
 
