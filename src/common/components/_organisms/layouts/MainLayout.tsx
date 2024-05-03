@@ -1,10 +1,10 @@
 import React from "react";
-import { Header } from "../../_molecules";
+import Checkout from "../../_molecules/Checkout/Checkout";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <Header />
+      <Checkout />
       {children}
     </div>
   );
