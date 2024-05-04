@@ -4,7 +4,7 @@ export interface IconProps {
   className?: string;
 }
 export interface InputTypes {
-  className: string
+  className: string;
   type: string;
   name: string;
   placeholder: string;
@@ -12,4 +12,8 @@ export interface InputTypes {
 export interface ButtonType {
   className: string;
   children: React.ReactNode;
+  width?: number;
+  height: number;
+  type: string;
+  backgroundColor?: string;
 }

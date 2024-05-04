@@ -22,7 +22,7 @@ const Footer = () => {
               Subcribe our Newsletter
             </p>
             <p className="text-[#999999] text-sm">
-              Pellentesque eu nibh eget mauris congue mattis mattis nec <br />{" "}
+              Pellentesque eu nibh eget mauris congue mattis mattis nec <br />
               tellus. Phasellus imperdiet elit eu magna.
             </p>
           </div>
@@ -34,9 +34,12 @@ const Footer = () => {
               placeholder="Your email address"
             />
             <Button
-              children="Subscribe"
-              className="absolute font-semibold right-[-100px] h-[50px] bg-[#00B207] rounded-3xl text-white px-8"
-            />
+              height={50}
+              type="secondary"
+              className="absolute font-semibold right-[-100px] rounded-3xl text-white px-8"
+            >
+              Subscribe
+            </Button>
           </div>
           <div className="flex ml-10 gap-2">
             <FacebookIcon width={40} height={40} />
