@@ -1,8 +1,12 @@
 import { MainLayout } from "./common/components/_organisms";
+import Footer from "./common/components/footer/Footer";
+
 const App = () => {
   return (
-    <MainLayout children={undefined}>
-    </MainLayout>
+      <MainLayout>
+        <h1>App</h1>
+        <Footer />
+      </MainLayout>
   );
 };
 
