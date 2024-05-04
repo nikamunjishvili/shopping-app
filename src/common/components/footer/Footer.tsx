@@ -34,6 +34,9 @@ const Footer = () => {
               placeholder="Your email address"
             />
             <Button
+              onClick={() => console.log("Hello")}
+              disabled={false}
+              isLoading={true}
               height={50}
               type="secondary"
               className="absolute font-semibold right-[-100px] rounded-3xl text-white px-8"
