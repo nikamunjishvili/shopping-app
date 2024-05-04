@@ -16,4 +16,7 @@ export interface ButtonType {
   height: number;
   type: string;
   backgroundColor?: string;
+  onClick: () => void;
+  disabled: boolean;
+  isLoading: boolean;
 }

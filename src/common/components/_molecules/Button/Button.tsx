@@ -6,6 +6,9 @@ const Button = ({
   type = "secondary",
   className,
   children,
+  disabled,
+  onClick,
+  isLoading,
 }: ButtonType) => {
   let backgroundColor;
   switch (type) {
@@ -21,11 +24,21 @@ const Button = ({
 
   return (
     <button
+      disabled={disabled}
       type={`${type}`}
       className={className}
-      style={{ backgroundColor: backgroundColor, height: height, width: width }}
+      style={{
+        backgroundColor: !disabled ? backgroundColor : "gray",
+        height: height,
+        width: width,
+        cursor: disabled ? "" : "pointer",
+      }}
+      onClick={onClick}
     >
-      {children}
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <span>{isLoading && "Loading..."}</span>
+        <> {children}</>
+      </div>
     </button>
   );
 };
