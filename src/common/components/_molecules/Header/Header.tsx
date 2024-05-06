@@ -3,6 +3,7 @@ import Arrow from "../../../../../public/Vector.svg";
 import Eco from "../../../../../public/EcoBazar.svg";
 import Heart from "../../../../../public/Heart.svg";
 import Bag from "../../../../../public/Bag.svg";
+
 const Header = () => {
   return (
     <>
