@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { ProductCart } from "../../common/components/_atoms";
 import { Button } from "../../common/components/_molecules";
 import Breadcrumbs from "../../common/components/_organisms/Breadcrumbs/Breadcrumbs";
 import useFetch from "../../common/hooks/useFetch";
@@ -23,7 +25,7 @@ const Products = () => {
   return (
     <div className="flex flex-col gap-[50px]">
       <Breadcrumbs />
-      <div className="flex flex-col px-[220px] gap-[20px]">
+      <div className="flex flex-col w-[1250px] m-auto gap-[20px]">
         <div className="flex justify-between">
           <Button
             className={
@@ -45,19 +47,30 @@ const Products = () => {
           <div className="grid grid-cols-3 gap-[15px] w-[984px]">
             {products &&
               products.map((product) => (
-                <div
+                <Link
+                  to={`/Categories/${product.id}`}
                   key={product.id}
-                  className="border-2 border-black rounded-[8px]"
+                  className="border-2 border-[#E6E6E6] rounded-[8px]"
                 >
                   <img
                     className="w-[302px] h-[302px]"
                     src={product.image}
                     alt=""
                   />
-                  <h2>{product.title}</h2>
-                  <p>{product.description}</p>
-                  <p>${product.price}</p>
-                </div>
+                  <div className="flex px-[16px] justify-between items-center">
+                    <div className="w-[230px] flex flex-col gap-[5px]">
+                      <h2>{product.title}</h2>
+                      <p className="font-semibold">${product.price}</p>
+                    </div>
+                    <div
+                      className={
+                        "w-[40px] h-[40px] rounded-full flex justify-center items-center bg-[#F2F2F2]"
+                      }
+                    >
+                      <ProductCart stroke={"#1A1A1A"} />
+                    </div>
+                  </div>
+                </Link>
               ))}
           </div>
         </div>
