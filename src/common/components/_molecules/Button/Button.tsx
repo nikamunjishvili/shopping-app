@@ -3,7 +3,7 @@ import { ButtonType } from "../../../types";
 const Button = ({
   width,
   height,
-  type = "secondary",
+  type = "submit",
   className,
   children,
   disabled,
@@ -12,11 +12,14 @@ const Button = ({
 }: ButtonType) => {
   let backgroundColor;
   switch (type) {
-    case "primary":
+    case "button":
       backgroundColor = "red";
       break;
-    case "secondary":
+    case "submit":
       backgroundColor = "#00B207";
+      break;
+    case "reset":
+      backgroundColor = "grey";
       break;
     default:
       break;
@@ -25,10 +28,10 @@ const Button = ({
   return (
     <button
       disabled={disabled}
-      type={`${type}`}
+      type={type}
       className={className}
       style={{
-        backgroundColor: !disabled ? backgroundColor : "gray",
+        backgroundColor: !disabled ? backgroundColor : "reset",
         height: height,
         width: width,
         cursor: disabled ? "" : "pointer",
