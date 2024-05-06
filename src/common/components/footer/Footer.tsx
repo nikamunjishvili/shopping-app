@@ -38,7 +38,7 @@ const Footer = () => {
               disabled={false}
               isLoading={true}
               height={50}
-              type="secondary"
+              type="submit"
               className="absolute font-semibold right-[-100px] rounded-3xl text-white px-8"
             >
               Subscribe
