@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="max-w-[1250px] mx-auto h-[165px] flex flex-col md:flex-row justify-between items-center py-6 px-4 md:px-0">
           <div className="w-[460px]">
             <p className="text-2xl font-semibold text-[#1A1A1A]">
-              Subcribe our Newsletter
+              Subscribe our Newsletter
             </p>
             <p className="text-[#999999] text-sm">
               Pellentesque eu nibh eget mauris congue mattis mattis nec <br />
