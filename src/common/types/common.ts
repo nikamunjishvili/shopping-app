@@ -1,4 +1,38 @@
 export interface IconProps {
   width: number;
   height: number;
+  className?: string;
+}
+export interface InputTypes {
+  className: string;
+  type: string;
+  name: string;
+  placeholder: string;
+}
+export interface ButtonType {
+  className: string;
+  children: React.ReactNode;
+  width?: number;
+  height: number;
+  type?: "submit" | "reset" | "button" | undefined;
+  backgroundColor?: string;
+  onClick: () => void;
+  disabled: boolean;
+  isLoading: boolean;
+}
+
+export interface UseFetchResult<T> {
+  data: T | null;
+  loading: boolean;
+  error: string | null;
+}
+
+export interface ProductType {
+  length: number;
+  id: number;
+  title: string;
+  price: string;
+  category: string;
+  description: string;
+  image: string;
 }

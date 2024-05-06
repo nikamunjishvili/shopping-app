@@ -1,9 +1,7 @@
-import { MainLayout } from '../common/components/_organisms'
+import { MainLayout } from "../common/components/_organisms";
 
 const About = () => {
-  return (
-    <MainLayout>About</MainLayout>
-  )
-}
+  return <MainLayout>About</MainLayout>;
+};
 
-export default About
+export default About;
