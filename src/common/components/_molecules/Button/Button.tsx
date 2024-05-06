@@ -19,7 +19,7 @@ const Button = ({
       backgroundColor = "#00B207";
       break;
     case "reset":
-      backgroundColor = "grey";
+      backgroundColor = "#F2F2F2";
       break;
     default:
       break;
@@ -38,7 +38,7 @@ const Button = ({
       }}
       onClick={onClick}
     >
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div style={{ display: 'flex', alignItems: "center", gap: '15px' }}>
         <span>{isLoading && "Loading..."}</span>
         <> {children}</>
       </div>

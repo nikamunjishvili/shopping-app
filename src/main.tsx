@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Products } from './pages/index.ts';
+import { Products, SingleProduct } from './pages/index.ts';
 
 const router = createBrowserRouter([
   {
@@ -13,7 +13,11 @@ const router = createBrowserRouter([
   {
       path: "/Categories",
       element: <Products />,
-  }
+  },
+  {
+    path: "/Categories/:id",
+    element: <SingleProduct />,
+},
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
