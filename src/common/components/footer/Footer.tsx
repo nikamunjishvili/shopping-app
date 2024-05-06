@@ -14,7 +14,7 @@ import { Button, Input } from "../_molecules";
 
 const Footer = () => {
   return (
-    <div className="absolute bottom-0 w-full h-[530px] bg-[#1A1A1A] font-fontPoppins">
+    <div className="bottom-0 w-full h-[530px] bg-[#1A1A1A] font-fontPoppins">
       <div className="h-[162px] bg-[#F7F7F7]">
         <div className="max-w-[1250px] mx-auto h-[165px] flex flex-col md:flex-row justify-between items-center py-6 px-4 md:px-0">
           <div className="w-[460px]">
