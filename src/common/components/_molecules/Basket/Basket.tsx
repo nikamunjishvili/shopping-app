@@ -1,5 +1,5 @@
 import shop from '../../../../../public/shop.svg'
-const Checkout = () => {
+const Basket = () => {
     return (
       <div className="w-screen h-screen flex flex-col justify-center items-center">
         <h1 className="p-8 text-[32px] font-semibold">
@@ -72,4 +72,4 @@ const Checkout = () => {
     );
   };
   
-  export default Checkout;
+  export default Basket;
