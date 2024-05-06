@@ -7,22 +7,24 @@ import Input from "../Input/input";
 const Header = () => {
   return (
     <>
-      <header className="flex w-[100%] bg-gray-900 shadow-md h-42 justify-around m-auto">
-        <div className="flex items-center h-[42px] text-gray-400 gap-2">
-          <img src={Pin} width={18} height={15} />
-          <p className="text-sm font-normal">
-            Store Location: Lincoln- 334, Illinois, Chicago, USA
-          </p>
-        </div>
+      <header className="flex w-[100%] bg-gray-900 shadow-md h-42">
+        <div className="flex w-[1250px] justify-between m-auto">
+          <div className="flex items-center h-[42px] text-gray-400 gap-2">
+            <img src={Pin} width={18} height={15} />
+            <p className="text-sm font-normal">
+              Store Location: Lincoln- 334, Illinois, Chicago, USA
+            </p>
+          </div>
 
-        <div className="flex items-center text-gray-400 gap-2 text-sm">
-          <p className="flex gap-[6px]">
-            Eng <img src={Arrow} />
-          </p>
-          <p className="flex gap-[6px]">
-            USD <img src={Arrow} />
-          </p>
-          |<p>Sign In / Sign Up</p>
+          <div className="flex items-center text-gray-400 gap-2 text-sm">
+            <p className="flex gap-[6px]">
+              Eng <img src={Arrow} />
+            </p>
+            <p className="flex gap-[6px]">
+              USD <img src={Arrow} />
+            </p>
+            |<p>Sign In / Sign Up</p>
+          </div>
         </div>
       </header>
 
