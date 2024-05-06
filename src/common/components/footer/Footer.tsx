@@ -36,7 +36,7 @@ const Footer = () => {
             <Button
               onClick={() => console.log("Hello")}
               disabled={false}
-              isLoading={true}
+              isLoading={false}
               height={50}
               type="secondary"
               className="absolute font-semibold right-[-100px] rounded-3xl text-white px-8"
