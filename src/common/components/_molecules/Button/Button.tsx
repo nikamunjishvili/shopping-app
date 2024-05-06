@@ -9,7 +9,7 @@ const Button = ({
   disabled,
   onClick,
   isLoading,
-}: ButtonType) => {
+}: ButtonType): JSX.Element => {
   let backgroundColor;
   switch (type) {
     case "button":
