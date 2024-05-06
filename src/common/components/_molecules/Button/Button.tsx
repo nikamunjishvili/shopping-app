@@ -10,6 +10,7 @@ const Button = ({
   onClick,
   isLoading,
 }: ButtonType): JSX.Element => {
+  console.log("Button rendered!!")
   let backgroundColor;
   switch (type) {
     case "button":
