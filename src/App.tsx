@@ -1,9 +1,10 @@
-import { MainLayout } from "./common/components/_organisms";
+import { Header } from "./common/components/_molecules";
 
 const App = () => {
   return (
-    <MainLayout>
-    </MainLayout>
+    <div>
+      <Header />
+    </div>
   );
 };
 
