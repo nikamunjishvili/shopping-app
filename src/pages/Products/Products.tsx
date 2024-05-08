@@ -21,7 +21,12 @@ const Products = () => {
   } = useFetch<ProductType[]>("https://fakestoreapi.com/products");
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <img
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        src="https://loading.io/assets/mod/spinner/spinner/lg.gif"
+      />
+    );
   }
 
   if (error) {
