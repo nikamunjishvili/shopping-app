@@ -1,22 +1,27 @@
+import React from "react";
+
 export interface IconProps {
   width: number;
   height: number;
   className?: string;
+  onClick?: () => void;
 }
 export interface InputTypes {
-  className: string;
-  type: string;
-  name: string;
-  placeholder: string;
+  className?: string;
+  type?: string;
+  name?: string;
+  placeholder?: string;
+  checked?: boolean;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 export interface ButtonType {
-  className: string;
+  className?: string;
   children: React.ReactNode;
   width?: number;
   height: number;
   type?: "submit" | "reset" | "button" | undefined;
   backgroundColor?: string;
-  onClick: () => void;
+  onClick?: () => void;
   disabled: boolean;
   isLoading: boolean;
 }
