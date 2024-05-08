@@ -1,16 +1,16 @@
-import Pin from "../../../../../public/Map Pin.svg";
-import Arrow from "../../../../../public/Vector.svg";
-import Eco from "../../../../../public/EcoBazar.svg";
-import Heart from "../../../../../public/Heart.svg";
-import Bag from "../../../../../public/Bag.svg";
 import Input from "../Input/input";
+import BagIcon from "../../_atoms/Icon/HeaderIcons/Bag";
+import HeartIcon from "../../_atoms/Icon/HeaderIcons/Heart";
+import EcoBazarIcon from "../../_atoms/Icon/HeaderIcons/EcoBazar";
+import PinIcon from "../../_atoms/Icon/HeaderIcons/Pin";
+import ArrowIcon from "../../_atoms/Icon/HeaderIcons/Arrow";
 const Header = () => {
   return (
     <>
       <header className="flex w-[100%] bg-gray-900 shadow-md h-42">
         <div className="flex w-[1250px] justify-between m-auto">
           <div className="flex items-center h-[42px] text-gray-400 gap-2">
-            <img src={Pin} width={18} height={15} />
+            <PinIcon width={17} height={20} />
             <p className="text-sm font-normal">
               Store Location: Lincoln- 334, Illinois, Chicago, USA
             </p>
@@ -18,10 +18,10 @@ const Header = () => {
 
           <div className="flex items-center text-gray-400 gap-2 text-sm">
             <p className="flex gap-[6px]">
-              Eng <img src={Arrow} />
+              Eng <ArrowIcon width={9} height={6} />
             </p>
             <p className="flex gap-[6px]">
-              USD <img src={Arrow} />
+              USD <ArrowIcon width={9} height={6} />
             </p>
             |<p>Sign In / Sign Up</p>
           </div>
@@ -31,7 +31,7 @@ const Header = () => {
       <section className="flex w-[1250px] m-auto h-[93px] ">
         <div className="flex items-center justify-between w-screen">
           <div className="flex items-center gap-[8px]">
-            <img src={Eco} width={32} />
+            <EcoBazarIcon width={32} height={31} />
             <p className="text-[32px] font-medium">Ecobazar</p>
           </div>
 
@@ -49,9 +49,9 @@ const Header = () => {
           </div>
 
           <div className="flex gap-[16px] items-center">
-            <img src={Heart} />
+            <HeartIcon width={30} height={26} />
             |
-            <img src={Bag} />
+            <BagIcon width={28} height={27} />
             <div>
               <p>Shopping Cart:</p>
               <p>$0.00</p>
