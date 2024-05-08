@@ -126,7 +126,7 @@ const Products = () => {
                 className="border-2 border-[#E6E6E6] rounded-[8px]"
               >
                 <img
-                  className="w-[302px] h-[302px]"
+                  className="w-[280px] h-[280px] m-auto"
                   src={product.image}
                   alt=""
                 />
