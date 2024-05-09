@@ -6,11 +6,11 @@ import {
   MastercardPay,
   SecurePay,
   VisaPay,
-} from "../_atoms";
-import Plant from "../_atoms/Icon/Plant";
-import Social from "../_atoms/Icon/Social";
-import Twitter from "../_atoms/Icon/Twitter";
-import { Button, Input } from "../_molecules";
+} from "../../_atoms/";
+import Plant from "../../_atoms/Icon/Plant";
+import Social from "../../_atoms/Icon/Social";
+import Twitter from "../../_atoms/Icon/Twitter";
+import { Button, Input } from "../../_molecules";
 
 const Footer = () => {
   return (
