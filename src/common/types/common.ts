@@ -16,14 +16,14 @@ export interface InputTypes {
 }
 export interface ButtonType {
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   width?: number;
   height: number;
   type?: "submit" | "reset" | "button" | undefined;
   backgroundColor?: string;
   onClick?: () => void;
-  disabled: boolean;
-  isLoading: boolean;
+  disabled?: boolean;
+  isLoading?: boolean;
 }
 
 export interface UseFetchResult<T> {
