@@ -1,9 +1,6 @@
+import { ArrowIcon, BagIcon, EcoBazarIcon, HeartIcon, PinIcon } from "../../_atoms";
 import Input from "../Input/input";
-import BagIcon from "../../_atoms/Icon/HeaderIcons/Bag";
-import HeartIcon from "../../_atoms/Icon/HeaderIcons/Heart";
-import EcoBazarIcon from "../../_atoms/Icon/HeaderIcons/EcoBazar";
-import PinIcon from "../../_atoms/Icon/HeaderIcons/Pin";
-import ArrowIcon from "../../_atoms/Icon/HeaderIcons/Arrow";
+
 const Header = () => {
   return (
     <>
