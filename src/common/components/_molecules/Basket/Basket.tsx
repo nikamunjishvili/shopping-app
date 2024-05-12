@@ -1,26 +1,23 @@
-import { useState } from 'react';
-// import shop from '../../../../../public/shop.svg'
-import red from '../../../../../public/red.svg'
-import close from '../../../../../public/Close.svg'
-
+import { useState } from "react";
+import red from "../../../../../public/red.svg";
+import close from "../../../../../public/Close.svg";
+import Button from "../Button/Button";
+import { Link } from "react-router-dom";
 
 const Basket = () => {
+  const [quantity, setQuantity] = useState(0);
 
-
-  const [quantity, setQuantity] = useState (0)
-  
   const increasequantity = () => {
     setQuantity(quantity + 1);
   };
 
   const decreasequantity = () => {
-    if(quantity === 0){
+    if (quantity === 0) {
       return;
     }
     setQuantity(quantity - 1);
   };
 
-  
   return (
     <div className="w-[100%] m-auto flex flex-col justify-center items-center">
       <h1 className="p-8 text-[32px] font-semibold">My Shopping Cart</h1>
@@ -33,7 +30,6 @@ const Basket = () => {
               <p className="text-button-250 text-[14px] ml-[76px]">QUANTITY</p>
               <p className="text-button-250 text-[14px] ml-[108px]">SUBTOTAL</p>
             </div>
-            {/* <img src={shop} width={200} height={200} className="ml-[320px]" /> */}
             <div className="w-[screen] h-[244px]">
               <div className="w-[screen] h-[122px] flex items-center justify-center">
                 <div className="flex items-center justify-between w-[780px]">
@@ -45,13 +41,25 @@ const Basket = () => {
                     <p>$14.00</p>
                     <div className="w-[124px] h-[50px] rounded-3xl border-[2px] flex items-center justify-center">
                       <div className="flex items-center justify-between w-[110px]">
-                       <button onClick={decreasequantity} className="w-[34px] h-[34px] bg-button-100 rounded-full">-</button>
-                       <p>{quantity}</p>
-                       <button onClick={increasequantity} className="w-[34px] h-[34px] bg-button-100 rounded-full">+</button>
+                        <button
+                          onClick={decreasequantity}
+                          className="w-[34px] h-[34px] bg-button-100 rounded-full"
+                        >
+                          -
+                        </button>
+                        <p>{quantity}</p>
+                        <button
+                          onClick={increasequantity}
+                          className="w-[34px] h-[34px] bg-button-100 rounded-full"
+                        >
+                          +
+                        </button>
                       </div>
                     </div>
                     <p>$70.00</p>
-                    <button><img src={close} width={24} height={24}/></button>
+                    <button>
+                      <img src={close} width={24} height={24} />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -102,9 +110,14 @@ const Basket = () => {
                 <p className="text-[16px] font-semibold">$0.00</p>
               </div>
             </div>
-            <button className="bg-button-150 w-[340px] h-[51px] rounded-[43px]  text-white font-semibold">
-              Proceed to checkout
-            </button>
+            <Link to="/Billing">
+              <Button
+                height={51}
+                className="flex items-center justify-center bg-button-150 w-[340px] rounded-[43px]  text-white font-semibold"
+              >
+                Proceed to checkout
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
