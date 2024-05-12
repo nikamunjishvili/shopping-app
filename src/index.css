@@ -14,3 +14,11 @@ body {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
 }
+
+.bg-search {
+  background-image: url(./../public/Search.svg);
+}
+
+.bg-left-custom {
+  background-position-x: 15px;
+}

@@ -57,35 +57,30 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <hr/>
+      <hr />
 
       <div className="flex py-[15px] w-[1250px] m-auto justify-between">
         <div className="flex gap-[16px]">
-        <p className="flex gap-[6px] items-center">
-          Home <ArrowIcon width={9} height={6} />
-        </p>
-        <p className="flex gap-[6px] items-center">
-          Shop <ArrowIcon width={9} height={6} />
-        </p>
-        <p className="flex gap-[6px] items-center">
-          Pages <ArrowIcon width={9} height={6} />
-        </p>
-        <p className="flex gap-[6px] items-center">
-          Blog <ArrowIcon width={9} height={6} />
-        </p>
-        <p>
-          About Us
-        </p>
-        <p>
-          Contact Us
-        </p>
+          <p className="flex gap-[6px] items-center">
+            Home <ArrowIcon width={9} height={6} />
+          </p>
+          <p className="flex gap-[6px] items-center">
+            Shop <ArrowIcon width={9} height={6} />
+          </p>
+          <p className="flex gap-[6px] items-center">
+            Pages <ArrowIcon width={9} height={6} />
+          </p>
+          <p className="flex gap-[6px] items-center">
+            Blog <ArrowIcon width={9} height={6} />
+          </p>
+          <p>About Us</p>
+          <p>Contact Us</p>
         </div>
 
         <div className="flex gap-[10px]">
           <Phone width={23} height={23} />
           <p>(219) 555-014</p>
         </div>
-
       </div>
     </>
   );
