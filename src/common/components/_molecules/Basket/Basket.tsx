@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import shop from '../../../../../public/shop.svg'
+// import shop from '../../../../../public/shop.svg'
 import red from '../../../../../public/red.svg'
 import close from '../../../../../public/Close.svg'
 
