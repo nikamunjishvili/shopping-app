@@ -5,7 +5,13 @@ import Breadcrumbs from "../../common/components/_organisms/Breadcrumbs/Breadcru
 import useFetch from "../../common/hooks/useFetch";
 import { ProductType } from "../../common/types";
 
+
 const SingleProduct = () => {
+
+  const handleClick = () => {
+    console.log(product)
+  }
+  
   const { id } = useParams();
   const {
     data: product,
@@ -49,9 +55,9 @@ const SingleProduct = () => {
               <div className="border-2 border-white border-y-[#E6E6E6] w-[511px] h-[88px] flex items-center">
                 <Button
                   className={
-                    "w-[447px] rounded-full flex justify-center text-[#FFFFFF]"
+                    "w-[447px] rounded-full flex justify-center items-center text-[#FFFFFF]"
                   }
-                  onClick={() => {}}
+                  onClick={handleClick}
                   disabled={false}
                   isLoading={false}
                   type="submit"
