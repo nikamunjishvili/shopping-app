@@ -1,4 +1,5 @@
 import { ArrowIcon, BagIcon, EcoBazarIcon, HeartIcon, PinIcon } from "../../_atoms";
+import Phone from "../../_atoms/Icon/HeaderIcon/Phone";
 import Input from "../Input/input";
 
 const Header = () => {
@@ -14,10 +15,10 @@ const Header = () => {
           </div>
 
           <div className="flex items-center text-gray-400 gap-2 text-sm">
-            <p className="flex gap-[6px]">
+            <p className="flex gap-[6px] items-center">
               Eng <ArrowIcon width={9} height={6} />
             </p>
-            <p className="flex gap-[6px]">
+            <p className="flex gap-[6px] items-center">
               USD <ArrowIcon width={9} height={6} />
             </p>
             |<p>Sign In / Sign Up</p>
@@ -25,7 +26,7 @@ const Header = () => {
         </div>
       </header>
 
-      <section className="flex w-[1250px] m-auto h-[93px] ">
+      <section className="flex w-[1250px] m-auto h-[93px]">
         <div className="flex items-center justify-between w-screen">
           <div className="flex items-center gap-[8px]">
             <EcoBazarIcon width={32} height={31} />
@@ -56,6 +57,36 @@ const Header = () => {
           </div>
         </div>
       </section>
+      <hr/>
+
+      <div className="flex py-[15px] w-[1250px] m-auto justify-between">
+        <div className="flex gap-[16px]">
+        <p className="flex gap-[6px] items-center">
+          Home <ArrowIcon width={9} height={6} />
+        </p>
+        <p className="flex gap-[6px] items-center">
+          Shop <ArrowIcon width={9} height={6} />
+        </p>
+        <p className="flex gap-[6px] items-center">
+          Pages <ArrowIcon width={9} height={6} />
+        </p>
+        <p className="flex gap-[6px] items-center">
+          Blog <ArrowIcon width={9} height={6} />
+        </p>
+        <p>
+          About Us
+        </p>
+        <p>
+          Contact Us
+        </p>
+        </div>
+
+        <div className="flex gap-[10px]">
+          <Phone width={23} height={23} />
+          <p>(219) 555-014</p>
+        </div>
+
+      </div>
     </>
   );
 };
