@@ -9,9 +9,13 @@ const Billing = () => {
   const [, setFirstName] = useState("");
   const [, setLastName] = useState("");
   const [, setEmail] = useState(true);
+  const [, setNumber] = useState(true);
+  const [, setZipCode] = useState(true);
   const [firstNameValid, setFirstNameValid] = useState(true);
   const [lastNameValid, setLastNameValid] = useState(true);
   const [emailVaild, setEmailValid] = useState(true);
+  const [numberValid, setNumberValid] = useState(true);
+  const [zipValid, setZipValid] = useState(true);
   const [countryPopup, setCountrypopup] = useState(true);
   const [georgiaSelect, setGeorgiaSelect] = useState(false);
   const [state, setState] = useState(false);
@@ -49,7 +53,18 @@ const Billing = () => {
     );
     setEmailValid(emailRegex);
   };
-
+  const handleNumberRegex = (e: any) => {
+    const { value } = e.target;
+    setNumber(value);
+    const numberRegex = /\d/.test(value);
+    setNumberValid(numberRegex);
+  };
+  const handleZipRegex = (e: any) => {
+    const { value } = e.target;
+    setZipCode(value);
+    const zipRegex = /^\d{0,5}$/.test(value);
+    setZipValid(zipRegex);
+  };
   return (
     <div>
       <Header />
@@ -98,11 +113,9 @@ const Billing = () => {
             <p className="text-sm">Street Address</p>
             <Input
               className="border-[#E6E6E6] w-full border-2 outline-gray-400 placeholder:text-[#999999] rounded-md mt-2 py-2 placeholder:px-3"
-              type="email"
+              type="text"
               placeholder="Address"
-              onChange={handleEmailRegex}
             />
-            {!emailVaild && <p className="text-red-500">Email is incorrect</p>}
           </div>
           <div className="flex gap-5">
             <div>
@@ -167,7 +180,9 @@ const Billing = () => {
                 className="border-[#E6E6E6] w-[280px] border-2 outline-gray-400 placeholder:text-[#999999] rounded-md mt-2 py-[11px] px-3"
                 type="text"
                 placeholder="Zip Code"
+                onChange={handleZipRegex}
               />
+              {!zipValid && <p className="text-red-500">Invalid Zip Code!</p>}
             </div>
           </div>
           <div className="flex mt-4 gap-5">
@@ -177,7 +192,11 @@ const Billing = () => {
                 className="border-2 w-[430px] py-[11px] rounded-md outline-gray-400 px-4 mt-2"
                 type="email"
                 placeholder="Email Address"
+                onChange={handleEmailRegex}
               />
+              {!emailVaild && (
+                <p className="text-red-500">Email is incorrect</p>
+              )}
             </div>
             <div>
               <p className="text-sm">Phone</p>
@@ -185,7 +204,11 @@ const Billing = () => {
                 className="border-2 py-[11px] w-[430px] rounded-md outline-gray-400 px-4 mt-2"
                 type="text"
                 placeholder="Phone number"
+                onChange={handleNumberRegex}
               />
+              {!numberValid && (
+                <p className="text-red-500">Phone number is incorrect</p>
+              )}
             </div>
           </div>
           <div className="flex gap-1 my-5">

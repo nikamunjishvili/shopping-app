@@ -2,7 +2,7 @@ import { Button, Input } from "../../../_molecules";
 
 const Order = () => {
   return (
-    <div className="w-[400px] border p-2 rounded-lg shadow-[#E6E6E6] shadow-sm">
+    <div className="w-[400px] h-[550px] border p-2 rounded-lg shadow-[#E6E6E6] shadow-sm">
       <div className="px-6">
         <h1 className="text-[#1A1A1A] text-xl font-medium">Order Summery</h1>
         <div className="flex justify-between w-full my-3">
