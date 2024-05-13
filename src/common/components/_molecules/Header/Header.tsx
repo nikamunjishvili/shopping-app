@@ -34,7 +34,14 @@ const Header = () => {
 
           <div className="flex">
             <Input
+<<<<<<< Updated upstream
               className="w-[498px] h-[45px] rounded-tl-[6px] rounded-bl-[6px] rounded-tr-none rounded-br-none border-gray-[1px] border
+=======
+              size="large"
+              width={498}
+              height={45}
+              className="rounded-tl-[6px] rounded-bl-[6px] rounded-tr-none rounded-br-none border-gray-[1px] border
+>>>>>>> Stashed changes
             border-gray-300 bg-search bg-no-repeat bg-center bg-left-custom pl-[44px]"
               placeholder="Search"
               type="search"

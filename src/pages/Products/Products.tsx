@@ -113,8 +113,7 @@ const Products = () => {
                           className="rounded-full appearance-none border-2 border-gray-300 checked:bg-green-600 checked:border-transparent h-5 w-5"
                           type="checkbox"
                           checked={selectedCategories.includes(category)}
-                          onChange={() => handleCategoryChange(category)}
-                        />
+                          onChange={() => handleCategoryChange(category)} size={undefined} width={0} height={0}                        />
                         <p className="text-base text-#1A1A1A">{category}</p>
                         <p className="text-#808080 font-extralight">
                           (

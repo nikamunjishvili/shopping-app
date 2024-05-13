@@ -31,8 +31,7 @@ const Footer = () => {
               className="w-[340px] h-[50px] outline-none rounded-3xl px-6"
               type="email"
               name="email"
-              placeholder="Your email address"
-            />
+              placeholder="Your email address" size={undefined} width={0} height={0}            />
             <Button
               onClick={() => console.log("Hello")}
               disabled={false}
