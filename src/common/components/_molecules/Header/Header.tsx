@@ -1,4 +1,11 @@
-import { ArrowIcon, BagIcon, EcoBazarIcon, HeartIcon, Phone, PinIcon } from "../../_atoms";
+import {
+  ArrowIcon,
+  BagIcon,
+  EcoBazarIcon,
+  HeartIcon,
+  Phone,
+  PinIcon,
+} from "../../_atoms";
 import Input from "../Input/input";
 
 const Header = () => {
@@ -34,12 +41,13 @@ const Header = () => {
 
           <div className="flex">
             <Input
+              size="large"
               className="w-[498px] h-[45px] rounded-tl-[6px] rounded-bl-[6px] rounded-tr-none rounded-br-none border-gray-[1px] border
             border-gray-300 bg-search bg-no-repeat bg-center bg-left-custom pl-[44px]"
               placeholder="Search"
               type="search"
               name="search"
-            ></Input>
+            />
             <button className="bg-green-500 w-[98px] h-[45px] rounded-tl-none rounded-br-lg text-white">
               Search
             </button>

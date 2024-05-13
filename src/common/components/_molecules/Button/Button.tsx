@@ -40,7 +40,7 @@ const Button = ({
     >
       <div style={{ display: 'flex', alignItems: "center", gap: '15px' }}>
         <span>{isLoading && "Loading..."}</span>
-        <> {children}</>
+        {children}
       </div>
     </button>
   );
