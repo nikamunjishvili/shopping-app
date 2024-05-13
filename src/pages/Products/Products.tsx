@@ -99,6 +99,7 @@ const Products = () => {
                     (category) => (
                       <div className="flex gap-2 items-center" key={category}>
                         <Input
+                          className="rounded-full appearance-none border-2 border-gray-300 checked:bg-green-600 checked:border-transparent h-5 w-5"
                           type="checkbox"
                           checked={selectedCategories.includes(category)}
                           onChange={() => handleCategoryChange(category)}
@@ -118,12 +119,12 @@ const Products = () => {
               </div>
             )}
           </div>
-          <div className="grid grid-cols-3 gap-[15px] w-[984px]">
+          <div className="grid grid-cols-3 gap-[20px] w-[984px]">
             {filteredProducts.map((product) => (
               <Link
                 to={`/Categories/${product.id}`}
                 key={product.id}
-                className="border-2 border-[#E6E6E6] rounded-[8px]"
+                className="border-2 border-[#E6E6E6] rounded-[8px] hover:border-[1px] hover:border-[#2C742F] hover:shadow-lg hover:shadow-[#20B52652]"
               >
                 <img
                   className="w-[280px] h-[280px] m-auto"
@@ -137,7 +138,7 @@ const Products = () => {
                   </div>
                   <div
                     className={
-                      "w-[40px] h-[40px] rounded-full flex justify-center items-center bg-[#F2F2F2]"
+                      "w-[40px] h-[40px] rounded-full flex justify-center items-center bg-[#F2F2F2] hover:bg-[#00B207] hover:stroke-[#fff]"
                     }
                   >
                     <ProductCart stroke={"#1A1A1A"} />
