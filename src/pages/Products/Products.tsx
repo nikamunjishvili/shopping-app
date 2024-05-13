@@ -14,6 +14,7 @@ import {
 const Products = () => {
   const [showCategories, setShowCategories] = useState(false);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [priceRange, setPriceRange] = useState({ min: 50, max: 1000 });
   const {
     data: products,
     loading,
@@ -49,10 +50,20 @@ const Products = () => {
     });
   };
 
+    const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const { name, value } = event.target;
+      setPriceRange({ ...priceRange, [name]: parseInt(value) });
+  };
+  
   const filteredProducts = products.filter((product) => {
     if (selectedCategories.length === 0) return true;
     return selectedCategories.includes(product.category);
   });
+
+   const filteredByPrice = filteredProducts.filter((product) => {
+     const productPrice = parseFloat(product.price);
+     return productPrice >= priceRange.min && productPrice <= priceRange.max;
+   });
 
   return (
     <div className="flex flex-col gap-[50px]">
@@ -118,34 +129,58 @@ const Products = () => {
                   )}
               </div>
             )}
+
+            <div className="mt-[10px]">
+              <p className="text-xl font-medium text-#1A1A1A">Price Range</p>
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value={priceRange.min}
+                name="min"
+                onChange={handlePriceChange}
+              />
+              <input
+                type="range"
+                min="0"
+                max="1000"
+                value={priceRange.max}
+                name="max"
+                onChange={handlePriceChange}
+              />
+              <div>{`$${priceRange.min} - $${priceRange.max}`}</div>
+            </div>
           </div>
+
           <div className="grid grid-cols-3 gap-[20px] w-[984px]">
-            {filteredProducts.map((product) => (
-              <Link
-                to={`/Categories/${product.id}`}
-                key={product.id}
-                className="border-2 border-[#E6E6E6] rounded-[8px] hover:border-[1px] hover:border-[#2C742F] hover:shadow-lg hover:shadow-[#20B52652]"
-              >
-                <img
-                  className="w-[280px] h-[280px] m-auto"
-                  src={product.image}
-                  alt=""
-                />
-                <div className="flex px-[16px] justify-between items-center">
-                  <div className="w-[230px] flex flex-col gap-[5px]">
-                    <h2>{product.title}</h2>
-                    <p className="font-semibold">${product.price}</p>
+            {filteredProducts.length > 0 &&
+              filteredByPrice.length > 0 &&
+              filteredByPrice.map((product) => (
+                <Link
+                  to={`/Categories/${product.id}`}
+                  key={product.id}
+                  className="border-2 border-[#E6E6E6] rounded-[8px] hover:border-[1px] hover:border-[#2C742F] hover:shadow-lg hover:shadow-[#20B52652]"
+                >
+                  <img
+                    className="w-[280px] h-[280px] m-auto"
+                    src={product.image}
+                    alt=""
+                  />
+                  <div className="flex px-[16px] justify-between items-center">
+                    <div className="w-[230px] flex flex-col gap-[5px]">
+                      <h2>{product.title}</h2>
+                      <p className="font-semibold">${product.price}</p>
+                    </div>
+                    <div
+                      className={
+                        "w-[40px] h-[40px] rounded-full flex justify-center items-center bg-[#F2F2F2] hover:bg-[#00B207] hover:stroke-[#fff]"
+                      }
+                    >
+                      <ProductCart stroke={"#1A1A1A"} />
+                    </div>
                   </div>
-                  <div
-                    className={
-                      "w-[40px] h-[40px] rounded-full flex justify-center items-center bg-[#F2F2F2] hover:bg-[#00B207] hover:stroke-[#fff]"
-                    }
-                  >
-                    <ProductCart stroke={"#1A1A1A"} />
-                  </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
           </div>
         </div>
       </div>
