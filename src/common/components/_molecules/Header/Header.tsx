@@ -1,5 +1,4 @@
-import { ArrowIcon, BagIcon, EcoBazarIcon, HeartIcon, PinIcon } from "../../_atoms";
-import Phone from "../../_atoms/Icon/HeaderIcon/Phone";
+import { ArrowIcon, BagIcon, EcoBazarIcon, HeartIcon, Phone, PinIcon } from "../../_atoms";
 import Input from "../Input/input";
 
 const Header = () => {
