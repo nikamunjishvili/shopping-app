@@ -6,11 +6,12 @@ import {
   MastercardPay,
   SecurePay,
   VisaPay,
-} from "../../_atoms/";
+} from "../../_atoms";
 import Plant from "../../_atoms/Icon/Plant";
 import Social from "../../_atoms/Icon/Social";
 import Twitter from "../../_atoms/Icon/Twitter";
-import { Button, Input } from "../../_molecules";
+import { Button, Input } from "..";
+import FooterNavBox from "./FooterNavBox";
 
 const Footer = () => {
   return (
@@ -74,42 +75,34 @@ const Footer = () => {
                 </p>
               </div>
             </div>
-            <div className="w-[100px]">
-              <h1 className="text-base text-white font-medium">My Account</h1>
-              <div className="grid mt-5 text-sm text-[#999999] gap-y-3">
-                <p>My Account</p>
-                <p>Order History</p>
-                <h1 className="text-white">Shoping Cart</h1>
-                <p>Wishlist</p>
-              </div>
-            </div>
-            <div className="w-[130px]">
-              <h1 className="text-base text-white font-medium">Helps</h1>
-              <div className="grid mt-5 text-sm gap-y-3 text-[#999999]">
-                <p>Contact</p>
-                <p>Faqs</p>
-                <p>Terms & Condition</p>
-                <p>Privacy Policy</p>
-              </div>
-            </div>
-            <div className="w-[85px]">
-              <h1 className="text-white text-base font-medium">Proxy</h1>
-              <div className="grid mt-5 text-sm gap-y-3 text-[#999999]">
-                <p>About</p>
-                <p>Shop</p>
-                <p>Product</p>
-                <p>Track Order</p>
-              </div>
-            </div>
-            <div className="w-[130px]">
-              <h1 className="text-white text-base font-medium">Categories</h1>
-              <div className="grid mt-5 text-sm gap-y-3 text-[#999999]">
-                <p>Fruit & Vegetables</p>
-                <p>Meat & Fish</p>
-                <p>Bread & Bakery</p>
-                <p>Beauty & Health</p>
-              </div>
-            </div>
+            <FooterNavBox
+              title="My Account"
+              contact="My Account"
+              facts="Order History"
+              conditions="Shoping Cart"
+              privacy="Wishlist"
+            />
+            <FooterNavBox
+              title="Helps"
+              contact="Contact"
+              facts="Faqts"
+              conditions="Terms & Condition"
+              privacy="Privacy Policy"
+            />
+             <FooterNavBox
+              title="Proxy"
+              contact="About"
+              facts="Shop"
+              conditions="Product"
+              privacy="Track Order"
+            />
+             <FooterNavBox
+              title="Categories"
+              contact="Fruit & Vegetables"
+              facts="Meat & Fish"
+              conditions="Bread & Bakery"
+              privacy="Beauty & Health"
+            />
           </div>
         </div>
         <div className="flex py-5 items-center justify-between w-full md:max-w-[1250px] mx-auto mt-4 md:mt-0">

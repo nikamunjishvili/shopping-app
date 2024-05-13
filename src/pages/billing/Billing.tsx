@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from "react";
 import { Header, Input } from "../../common/components/_molecules";
 import Breadcrumbs from "../../common/components/_organisms/Breadcrumbs/Breadcrumbs";
-import Footer from "../../common/components/_organisms/footer/Footer";
+import Footer from "../../common/components/_molecules/footer/Footer";
 import { UpArrow } from "../../common/components/_atoms";
 import Order from "./order/Order";
 
