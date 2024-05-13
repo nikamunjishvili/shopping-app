@@ -33,6 +33,9 @@ const Footer = () => {
               type="email"
               name="email"
               placeholder="Your email address"
+              size={undefined}
+              width={0}
+              height={0}
             />
             <Button
               onClick={() => console.log("Hello")}
@@ -89,14 +92,14 @@ const Footer = () => {
               conditions="Terms & Condition"
               privacy="Privacy Policy"
             />
-             <FooterNavBox
+            <FooterNavBox
               title="Proxy"
               contact="About"
               facts="Shop"
               conditions="Product"
               privacy="Track Order"
             />
-             <FooterNavBox
+            <FooterNavBox
               title="Categories"
               contact="Fruit & Vegetables"
               facts="Meat & Fish"

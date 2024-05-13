@@ -13,9 +13,9 @@ export interface InputTypes {
   placeholder?: string;
   checked?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  size: string | number | undefined;
-  width: number;
-  height: number;
+  size?: any
+  width?: number;
+  height?: number;
 }
 export interface ButtonType {
   className?: string;
