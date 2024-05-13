@@ -8,7 +8,7 @@ const FooterNavBox = (props: {
   const { title, contact, facts, conditions, privacy } = props;
   
   return (
-    <div className="w-[130px]">
+    <div className="w-[125px]">
       <h1 className="text-base text-white font-medium">{title}</h1>
       <div className="grid mt-5 text-sm gap-y-3 text-[#999999]">
         <p>{contact}</p>
