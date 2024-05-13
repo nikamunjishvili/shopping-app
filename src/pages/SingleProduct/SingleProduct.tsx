@@ -49,7 +49,7 @@ const SingleProduct = () => {
               <div className="border-2 border-white border-y-[#E6E6E6] w-[511px] h-[88px] flex items-center">
                 <Button
                   className={
-                    "w-[447px] rounded-full flex justify-center text-[#FFFFFF]"
+                    "w-[447px] rounded-full flex justify-center items-center text-[#FFFFFF]"
                   }
                   onClick={() => {}}
                   disabled={false}
@@ -57,7 +57,7 @@ const SingleProduct = () => {
                   type="submit"
                   height={51}
                 >
-                  {"add to cart"}
+                  {"Add to cart"}
                   <ProductCart stroke={"#FFFFFF"} />
                 </Button>
               </div>
