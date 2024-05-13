@@ -1,8 +1,8 @@
 import { ChangeEvent, useState } from "react";
-import { Header, Input } from "../../_molecules";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import Footer from "../footer/Footer";
-import { UpArrow } from "../../_atoms";
+import { Header, Input } from "../../common/components/_molecules";
+import Breadcrumbs from "../../common/components/_organisms/Breadcrumbs/Breadcrumbs";
+import Footer from "../../common/components/_organisms/footer/Footer";
+import { UpArrow } from "../../common/components/_atoms";
 import Order from "./order/Order";
 
 const Billing = () => {

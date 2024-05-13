@@ -4,7 +4,7 @@ import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Products, SingleProduct } from './pages/index.ts';
-import Billing from './common/components/_organisms/billing/Billing.tsx';
+import Billing from './pages/billing/Billing.tsx';
 
 const router = createBrowserRouter([
   {

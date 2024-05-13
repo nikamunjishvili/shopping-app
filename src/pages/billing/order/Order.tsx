@@ -1,4 +1,4 @@
-import { Button, Input } from "../../../_molecules";
+import { Button, Input } from "../../../common/components/_molecules";
 
 const Order = () => {
   return (
