@@ -50,20 +50,20 @@ const Products = () => {
     });
   };
 
-    const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = event.target;
-      setPriceRange({ ...priceRange, [name]: parseInt(value) });
+  const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setPriceRange({ ...priceRange, [name]: parseInt(value) });
   };
-  
+
   const filteredProducts = products.filter((product) => {
     if (selectedCategories.length === 0) return true;
     return selectedCategories.includes(product.category);
   });
 
-   const filteredByPrice = filteredProducts.filter((product) => {
-     const productPrice = parseFloat(product.price);
-     return productPrice >= priceRange.min && productPrice <= priceRange.max;
-   });
+  const filteredByPrice = filteredProducts.filter((product) => {
+    const productPrice = parseFloat(product.price);
+    return productPrice >= priceRange.min && productPrice <= priceRange.max;
+  });
 
   return (
     <div className="flex flex-col gap-[50px]">
@@ -129,27 +129,28 @@ const Products = () => {
                   )}
               </div>
             )}
-
-            <div className="mt-[10px]">
-              <p className="text-xl font-medium text-#1A1A1A">Price Range</p>
-              <input
-                type="range"
-                min="0"
-                max="1000"
-                value={priceRange.min}
-                name="min"
-                onChange={handlePriceChange}
-              />
-              <input
-                type="range"
-                min="0"
-                max="1000"
-                value={priceRange.max}
-                name="max"
-                onChange={handlePriceChange}
-              />
-              <div>{`$${priceRange.min} - $${priceRange.max}`}</div>
-            </div>
+            {showCategories && (
+              <div className="mt-[10px]">
+                <p className="text-xl font-medium text-#1A1A1A">Price Range</p>
+                <input
+                  type="range"
+                  min="0"
+                  max="1000"
+                  value={priceRange.min}
+                  name="min"
+                  onChange={handlePriceChange}
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="1000"
+                  value={priceRange.max}
+                  name="max"
+                  onChange={handlePriceChange}
+                />
+                <div>{`$${priceRange.min} - $${priceRange.max}`}</div>
+              </div>
+            )}
           </div>
 
           <div className="grid grid-cols-3 gap-[20px] w-[984px]">
