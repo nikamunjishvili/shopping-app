@@ -3,6 +3,7 @@ import red from "../../../../../public/red.svg";
 import close from "../../../../../public/Close.svg";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
+import Input from "../Input/input";
 
 const Basket = () => {
   const [quantity, setQuantity] = useState(0);
@@ -41,36 +42,34 @@ const Basket = () => {
                     <p>$14.00</p>
                     <div className="w-[124px] h-[50px] rounded-3xl border-[2px] flex items-center justify-center">
                       <div className="flex items-center justify-between w-[110px]">
-                        <button
+                        <Button
                           onClick={decreasequantity}
-                          className="w-[34px] h-[34px] bg-button-100 rounded-full"
-                        >
+                          className="w-[34px] h-[34px] bg-button-100 rounded-full" height={34}                        >
                           -
-                        </button>
+                        </Button>
                         <p>{quantity}</p>
-                        <button
+                        <Button
                           onClick={increasequantity}
-                          className="w-[34px] h-[34px] bg-button-100 rounded-full"
-                        >
+                          className="w-[34px] h-[34px] bg-button-100 rounded-full" height={34}                        >
                           +
-                        </button>
+                        </Button>
                       </div>
                     </div>
                     <p>$70.00</p>
-                    <button>
+                    <Button height={22}>
                       <img src={close} width={24} height={24} />
-                    </button>
+                    </Button>
                   </div>
                 </div>
               </div>
             </div>
             <div className="w-[872xp] h-[85px] border-[1px] rounded-b-lg flex items-center">
-              <button className="text-sm font-semibold ml-[18px] rounded-[46px] bg-button-100 h-[45px] w-[151px]">
+              <Button className="text-sm font-semibold ml-[18px] rounded-[46px] bg-button-100 w-[151px]" height={45}>
                 Return to shop
-              </button>
-              <button className="text-sm font-semibold ml-[483px] rounded-[46px] bg-button-100 h-[45px] w-[151px]">
+              </Button>
+              <Button className="text-sm font-semibold ml-[483px] rounded-[46px] bg-button-100 w-[151px]" height={45}>
                 Update Cart
-              </button>
+              </Button>
             </div>
           </div>
           <div className="w-[830px] h-[92px] bg-white rounded-lg border-[1px] flex items-center justify-center">
@@ -79,14 +78,14 @@ const Basket = () => {
                 Coupon Code
               </p>
               <div className="flex flex-row w-[600px] relative">
-                <input
+                <Input
                   className="border-[1px] rounded-[46px] h-[52px] w-[531px] outline-none p-6"
                   type="text"
                   placeholder="Enter code"
                 />
-                <button className="w-[196px] h-[52px] bg-button-50 rounded-[43px] text-white absolute right-[1px]">
+                <Button className="w-[196px] bg-button-50 rounded-[43px] text-white absolute right-[1px]" height={52}>
                   Apply Coupon
-                </button>
+                </Button>
               </div>
             </div>
           </div>
