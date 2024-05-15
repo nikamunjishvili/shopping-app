@@ -26,6 +26,11 @@ const Breadcrumbs = () => {
             Checkout
           </p>
         </Link>
+        <Link to="/pages/sign-up">
+          <p className="text-white hover:border-b-2 transition py-3">
+            Register
+          </p>
+        </Link>
       </div>
     </div>
   );
