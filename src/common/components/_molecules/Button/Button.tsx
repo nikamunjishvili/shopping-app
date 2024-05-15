@@ -27,9 +27,9 @@ const Button = ({
 
   return (
     <button
+      className={className}
       disabled={disabled}
       type={type}
-      className={className}
       style={{
         backgroundColor: !disabled ? backgroundColor : "reset",
         height: height,
@@ -38,7 +38,7 @@ const Button = ({
       }}
       onClick={onClick}
     >
-      <div style={{ display: 'flex', alignItems: "center", gap: '15px' }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
         <span>{isLoading && "Loading..."}</span>
         {children}
       </div>
