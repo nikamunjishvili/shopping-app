@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   ArrowIcon,
   BagIcon,
@@ -27,7 +28,14 @@ const Header = () => {
             <p className="flex gap-[6px] items-center">
               USD <ArrowIcon width={9} height={6} />
             </p>
-            |<p>Sign In / Sign Up</p>
+            <div className="flex gap-3">
+              <Link to="/pages/sign-in">
+                <p className="cursor-pointer">Sign In</p>
+              </Link>
+              <Link to="/pages/sign-up">
+                <p className="cursor-pointer">Sign Up</p>
+              </Link>
+            </div>
           </div>
         </div>
       </header>

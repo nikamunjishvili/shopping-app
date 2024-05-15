@@ -7,13 +7,15 @@ export interface IconProps {
   onClick?: () => void;
 }
 export interface InputTypes {
+  value: any;
+  onKeyDown: any;
   className?: string;
   type?: string;
   name?: string;
   placeholder?: string;
   checked?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  size?: any
+  size?: any;
   width?: number;
   height?: number;
 }

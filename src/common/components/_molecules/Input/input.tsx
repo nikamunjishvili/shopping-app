@@ -10,6 +10,8 @@ const Input = ({
   checked,
   onChange,
   size,
+  onKeyDown,
+  value,
 }: InputTypes) => {
   switch (size) {
     case "small":
@@ -38,6 +40,8 @@ const Input = ({
       type={type}
       name={name}
       checked={checked}
+      onKeyDown={onKeyDown}
+      value={value}
     />
   );
 };
