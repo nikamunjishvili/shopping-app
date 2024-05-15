@@ -7,8 +7,8 @@ export interface IconProps {
   onClick?: () => void;
 }
 export interface InputTypes {
-  value: any;
-  onKeyDown: any;
+  value?: any;
+  onKeyDown?: any;
   className?: string;
   type?: string;
   name?: string;
