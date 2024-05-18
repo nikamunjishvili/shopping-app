@@ -4,6 +4,7 @@ import { Button } from "../../common/components/_molecules";
 import Breadcrumbs from "../../common/components/_organisms/Breadcrumbs/Breadcrumbs";
 import useFetch from "../../common/hooks/useFetch";
 import { ProductType } from "../../common/types";
+import { useCart } from "../../context/ProductsContext";
 
 const SingleProduct = () => {
   const { id } = useParams();
@@ -12,6 +13,7 @@ const SingleProduct = () => {
     loading,
     error,
   } = useFetch<ProductType>(`https://fakestoreapi.com/products/${id}`);
+  const { addProducts } = useCart();
 
   if (loading) {
     return <div>Loading...</div>;
@@ -51,7 +53,7 @@ const SingleProduct = () => {
                   className={
                     "w-[447px] rounded-full flex justify-center items-center text-[#FFFFFF]"
                   }
-                  onClick={() => {}}
+                  onClick={() => addProducts(product)}
                   disabled={false}
                   isLoading={false}
                   type="submit"

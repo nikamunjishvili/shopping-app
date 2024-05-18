@@ -5,6 +5,7 @@ export interface IconProps {
   height: number;
   className?: string;
   onClick?: () => void;
+  children?:  React.ReactNode;
 }
 export interface InputTypes {
   value?: any;
@@ -38,6 +39,7 @@ export interface UseFetchResult<T> {
 }
 
 export interface ProductType {
+  toFixed(arg0: number): React.ReactNode;
   length: number;
   id: number;
   title: string;
@@ -45,4 +47,12 @@ export interface ProductType {
   category: string;
   description: string;
   image: string;
+  quantity: number;
+  totalAmount: number | string;
+}
+
+export interface ContextProps {
+  productList: ProductType[];
+  setProductList: React.Dispatch<React.SetStateAction<ProductType[]>>;
+  addProducts: (product: ProductType) => void;
 }
