@@ -7,16 +7,16 @@ import { ProductType } from "../../../types";
 
 const Basket = () => {
   const { productList, setProductList } = useCart();
-  const [quantities, setQuantities] = useState(
+  const [quantities, setQuantities] = useState<{ [key: string]: number }>(
     productList.reduce((acc, product) => {
       acc[product.id] = 1;
       return acc;
-    }, {})
+    }, {} as { [key: string]: number })
   );
 
-  const handleQuantityChange = (productId: ProductType, increment: number) => {
+  const handleQuantityChange = (productId: string, increment: number) => {
     setQuantities((prevQuantities) => {
-      const newQuantity = prevQuantities[productId] + increment;
+      const newQuantity = (prevQuantities[productId] || 0) + increment;
       return {
         ...prevQuantities,
         [productId]: newQuantity > 0 ? newQuantity : 0,
@@ -24,9 +24,9 @@ const Basket = () => {
     });
   };
 
-  const calculateSubtotal = (productId: ProductType) => {
+  const calculateSubtotal = (productId: string) => {
     const product = productList.find((product) => product.id === productId);
-    return product.price * quantities[productId];
+    return product ? product.price * (quantities[productId] || 0) : 0;
   };
 
   const calculateTotal = () => {
@@ -37,9 +37,12 @@ const Basket = () => {
   };
 
   const deleteItem = (product: ProductType) => {
-    setProductList((prev) =>
-      prev.filter((item) => item !== product)
-    );
+    setProductList((prev) => prev.filter((item) => item.id !== product.id));
+    setQuantities((prevQuantities) => {
+      const newQuantities = { ...prevQuantities };
+      delete newQuantities[product.id];
+      return newQuantities;
+    });
   };
 
   return (

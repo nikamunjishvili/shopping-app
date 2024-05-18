@@ -13,8 +13,8 @@ import { useCart } from "../../../../context/ProductsContext";
 const Header = () => {
   const { productList } = useCart();
 
-  const getTotalPrice = () => {
-    return productList.reduce((total, product) => total + product.price, 0);
+  const getTotalPrice = (): number => {
+    return productList.reduce((total: number, product: any) => total + product.price, 0);
   };
 
   return (

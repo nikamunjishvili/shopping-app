@@ -41,9 +41,9 @@ export interface UseFetchResult<T> {
 export interface ProductType {
   toFixed(arg0: number): React.ReactNode;
   length: number;
-  id: number;
+  id: any;
   title: string;
-  price: string;
+  price: any;
   category: string;
   description: string;
   image: string;
