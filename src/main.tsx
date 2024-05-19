@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
@@ -7,6 +6,7 @@ import { Products, SingleProduct } from "./pages/index.ts";
 import Billing from "./pages/billing/Billing.tsx";
 import SignIn from "./pages/Sign-in/SignIn.tsx";
 import SignUp from "./pages/Sign-up/SignUp.tsx";
+import ProductsContextProvider from "./context/ProductsContext.tsx";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+  <ProductsContextProvider>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  </ProductsContextProvider>
 );

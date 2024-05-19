@@ -1,6 +1,6 @@
 import { IconProps } from "../../../../types";
 
-const BagIcon = ({ width, height }: IconProps) => {
+const BagIcon = ({ width, height, children }: IconProps) => {
   return (
     <svg
       width={width}
@@ -16,6 +16,7 @@ const BagIcon = ({ width, height }: IconProps) => {
         stroke-linecap="round"
         stroke-linejoin="round"
       />
+      {children}
     </svg>
   );
 };

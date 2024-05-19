@@ -8,8 +8,15 @@ import {
   PinIcon,
 } from "../../_atoms";
 import Input from "../Input/input";
+import { useCart } from "../../../../context/ProductsContext";
 
 const Header = () => {
+  const { productList } = useCart();
+
+  const getTotalPrice = (): number => {
+    return productList.reduce((total: number, product: any) => total + product.price, 0);
+  };
+
   return (
     <>
       <header className="flex w-[100%] bg-gray-900 shadow-md h-42">
@@ -20,7 +27,6 @@ const Header = () => {
               Store Location: Lincoln- 334, Illinois, Chicago, USA
             </p>
           </div>
-
           <div className="flex items-center text-gray-400 gap-2 text-sm">
             <p className="flex gap-[6px] items-center">
               Eng <ArrowIcon width={9} height={6} />
@@ -39,14 +45,12 @@ const Header = () => {
           </div>
         </div>
       </header>
-
       <section className="flex w-[1250px] m-auto h-[93px]">
         <div className="flex items-center justify-between w-screen">
           <div className="flex items-center gap-[8px]">
             <EcoBazarIcon width={32} height={31} />
             <p className="text-[32px] font-medium">Ecobazar</p>
           </div>
-
           <div className="flex">
             <Input
               size="large"
@@ -60,20 +64,19 @@ const Header = () => {
               Search
             </button>
           </div>
-
-          <div className="flex gap-[16px] items-center">
+          <div className="flex gap-[16px] items-center relative">
             <HeartIcon width={30} height={26} />
             |
-            <BagIcon width={28} height={27} />
+            <BagIcon width={28} height={27} className=""/>
+            <span className="rounded-[16px] bg-[#2C742F] w-[18px] h-[18px] flex justify-center items-center text-[10px] text-white font-medium leading-[10px] absolute left-[78px] top-[5px]">{productList.length}</span>
             <div>
               <p>Shopping Cart:</p>
-              <p>$0.00</p>
+              <p>${getTotalPrice().toFixed(2)}</p>
             </div>
           </div>
         </div>
       </section>
       <hr />
-
       <div className="flex py-[15px] w-[1250px] m-auto justify-between">
         <div className="flex gap-[16px]">
           <p className="flex gap-[6px] items-center">
@@ -91,7 +94,6 @@ const Header = () => {
           <p>About Us</p>
           <p>Contact Us</p>
         </div>
-
         <div className="flex gap-[10px]">
           <Phone width={23} height={23} />
           <p>(219) 555-014</p>
